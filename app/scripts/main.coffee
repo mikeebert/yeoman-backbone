@@ -14,4 +14,5 @@ require('.tmp/scripts/routes/*');
 
 $ ->
   yeomanBackbone.init();
-  router = new yeomanBackbone.Routers.MyrouterRouter()
+  yeomanBackbone.router = new yeomanBackbone.Routers.MyrouterRouter()
+  Backbone.history.start()
