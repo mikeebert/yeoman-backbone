@@ -5,9 +5,11 @@ class yeomanBackbone.Views.HomeView extends Backbone.View
   events:
    'click [data-name=goto-home]' : '_doSomething'
 
+  initialize: ->
+    @render()
+
   render: ->
     @$el.empty()
-    # html = @template @presenter.p(@model)
     html = "<h1 data-name='goto-home'>test render</h1>"
     @$el.html html
     @

@@ -4,16 +4,14 @@ window.yeomanBackbone =
   Views: {}
   Routers: {}
   init: ->
-    console.log 'Hello from Backbone!'
-    HomeView = new yeomanBackbone.Views.HomeView();
-    HomeView.render()
 
 # Order and include as you please.
 require('.tmp/scripts/templates');
 require('.tmp/scripts/views/*');
 require('.tmp/scripts/models/*');
 require('.tmp/scripts/controllers/*');
-require('.tmp/scripts/routers/*');
+require('.tmp/scripts/routes/*');
 
 $ ->
   yeomanBackbone.init();
+  router = new yeomanBackbone.Routers.MyrouterRouter()
